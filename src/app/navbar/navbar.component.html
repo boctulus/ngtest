@@ -3,12 +3,11 @@
     Brand
   </a>
 
-  <button class="navbar-toggler" type="button">
+  <button class="navbar-toggler" type="button" (click)="toogle()"> 
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
-  <div class="collapse navbar-collapse">
+  <div class="collapse navbar-collapse" [ngClass]="{'show':visible}" >
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" href="#">Item 1</a>

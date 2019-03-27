@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'navbar',
@@ -7,17 +6,16 @@ import * as $ from 'jquery';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  visible : boolean;
 
   constructor() { }
 
   ngOnInit() {
-    $('body').on('click', '.navbar-toggler', ()=>{
-      this.toogle();
-    });
+    this.visible = false;
   }
 
-  toogle(){
-    $('.navbar-collapse').toggleClass('show');
+  toogle() {
+    this.visible = !this.visible;
   }
 
 }
